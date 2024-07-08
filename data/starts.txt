@@ -1,6 +1,6 @@
 start "quickstart custom"
 	name "Custom Start (Normal)"
-	description `A customizeable start for Endless Sky. Choose your starting credits and go nuts.`
+	description `A customizable start. Choose your starting credits and go nuts.`
 	thumbnail "scene/lobby"
 	date 16 11 3013
 	system "Rutilicus"
@@ -26,7 +26,7 @@ conversation "quickstart"
 			goto subcredits
 			to display
 				"credits" >= 500000
-		`	(Move onward.)`
+		`	(Move on.)`
 			goto step2
 			to display
 				"credits" > 0
@@ -34,19 +34,19 @@ conversation "quickstart"
 	label addcredits
 	action
 		payment 500000
-	`	500,000 Credits are added to your account.`
+	`	500,000 credits are added to your account.`
 		goto money
 
 	label subcredits
 	action
 		payment -500000
-	`	500,000 Credits are removed from your account.`
+	`	500,000 credits are removed from your account.`
 		goto money
 
 	label step2
 	`	Again, the console's text blurs and melts into the next command line. "Enter Clearance."`
 	label licenses
-	`	A huge list of what looks like licenses awaits you.`
+	`	A huge list of what looks like licenses appears.`
 	choice
 		`	(Get a Militia License.)`
 			goto militia
@@ -132,7 +132,7 @@ conversation "quickstart"
 			goto vilord
 			to display
 				not "license: Vi Lord"
-		`	(Move onward.)`
+		`	(Move on.)`
 			goto step3
 
 	label militia
@@ -262,7 +262,7 @@ conversation "quickstart"
 		goto licenses
 
 	label step3
-	`	With another ebb and flow of its interface, the terminal spits out a long list of complicated-looking commands. You have no idea what any of them is referring to, but maybe someone more important does.`
+	`	With another ebb and flow of its interface, the terminal spits out a long list of complicated-looking commands. You have no idea what any of them refer to, but maybe someone more important does.`
 	label campaigns
 	choice
 		`	(Skip the Free Worlds Campaign.)`
@@ -323,4 +323,4 @@ conversation "quickstart"
 		goto campaigns
 
 	label end
-	`The terminal aburptly flashes bright enough to make you lurch awake. On your bed rests your faithful datapad displaying the credit value on the console in your apparent dream, but also a new license. You'd best not question it; the galaxy calls.`
+	`The terminal aburptly flashes bright enough to make you lurch awake. On your bed rests your faithful datapad displaying the credit value on the console in your apparent dream, but also some new licenses. It would be best not question it; the galaxy calls.`
