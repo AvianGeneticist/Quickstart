@@ -323,4 +323,4 @@ conversation "quickstart"
 		goto campaigns
 
 	label end
-	`The terminal aburptly flashes bright enough to make you lurch awake. On your bed rests your faithful datapad displaying the credit value on the console in your apparent dream, but also some new licenses. It would be best not question it; the galaxy calls.`
+	`The terminal aburptly flashes bright enough to make you lurch awake. On your bed rests your faithful datapad displaying the credit value on the console in your apparent dream, but also a new license. It would be best not to question it; the galaxy calls.`
