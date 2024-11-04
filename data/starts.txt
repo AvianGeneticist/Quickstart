@@ -132,6 +132,18 @@ conversation "quickstart"
 			goto vilord
 			to display
 				not "license: Vi Lord"
+		`	(Get a Hicemus Conflict License.)`
+			goto hicemus
+			to display
+				not "license: Hicemus Conflict"
+		`	(Get a Successor License.)`
+			goto successor
+			to display
+				not "license: Successor"
+		`	(Get a High Houses License.)`
+			goto highhouse
+			to display
+				not "license: High Houses"
 		`	(Move on.)`
 			goto step3
 
@@ -259,6 +271,24 @@ conversation "quickstart"
 	action
 		set "license: Vi Lord"
 	`	An image of a Vi Lord license appears over the screen briefly.`
+		goto licenses
+
+	label hicemus
+	action
+		set "license: Hicemus Conflict"
+	`	An image of a Hicemus Conflict license appears over the screen briefly.`
+		goto licenses
+
+	label successor
+	action
+		set "license: Successor"
+	`	An image of a Successor license appears over the screen briefly.`
+		goto licenses
+
+	label highhouse
+	action
+		set "license: High Houses"
+	`	An image of a High House license appears over the screen briefly.`
 		goto licenses
 
 	label step3
